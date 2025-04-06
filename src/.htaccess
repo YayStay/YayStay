@@ -1,0 +1,16 @@
+# Разрешаване на достъп за всички
+Allow from all
+
+# Пренасочване от HTTP към HTTPS
+RewriteEngine On
+RewriteCond %{HTTPS} off
+RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# Защита от директен достъп до .htaccess
+<Files .htaccess>
+    Order Allow,Deny
+    Allow from all
+</Files>
+
+# Пренасочване на невалидни URL адреси към основната страница (404)
+ErrorDocument 404 /404.html
