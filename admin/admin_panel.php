@@ -68,7 +68,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['add'])) {
         
     } catch (Exception $e) {
         $pdo->rollBack();
-        $_SESSION['error_message'] = "грешка: " . $e->getMessage();
+        $_SESSION['error_message'] = "Грешка: " . $e->getMessage();
         error_log("Database error: " . $e->getMessage());
     }
 }
@@ -123,7 +123,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['update'])) {
         exit;
     } catch (Exception $e) {
         $pdo->rollBack();
-        $_SESSION['error_message'] = "грешка: " . $e->getMessage();
+        $_SESSION['error_message'] = "Грешка: " . $e->getMessage();
     }
 }
 

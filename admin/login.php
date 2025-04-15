@@ -63,7 +63,7 @@ error_log("Current session status: " . print_r($_SESSION, true));
         button {
             width: 100%;
             padding: 10px;
-            background: #007bff;
+            background:rgb(255, 0, 170);
             color: white;
             border: none;
             border-radius: 3px;
